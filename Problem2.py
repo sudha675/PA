@@ -43,6 +43,9 @@ def get_wordnet_pos(tag):
         return wordnet.NOUN  # default to noun
 
 lemmatizer = WordNetLemmatizer()
-lemmatized_words = [lemmatizer.lemmatize(token, get_wordnet_pos(pos)) for token, pos in lemm_pos_tags]
-
+lemmatized_words = []
+for token,pos in lemm_pos_tags:
+    wordnet_pos = get_wordnet_pos(pos)
+    lemmatized_word = lemmatizer.lemmatize(token, pos=wordnet_pos)
+    lemmatized_words.append(lemmatized_word)
 print("Lemmatizer Words:", lemmatized_words)
