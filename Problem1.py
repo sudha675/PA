@@ -1,4 +1,4 @@
-# Upper case 
+#Upper case 
 input = "centurion university technology and management . I am a student of this university ."
 input = input.upper()
 print(input)
@@ -12,9 +12,10 @@ print(word)
 word1=sent_tokenize(input)
 print(word1)
 
+#stop words
 import nltk
 from nltk.corpus import stopwords
-# nltk.download('stopwords')
+# nltk.download('stopwords')    
 # print(stopwords.fileids())
 word=input.lower()
 word=word_tokenize(word)
